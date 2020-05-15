@@ -53,9 +53,32 @@ INSERT INTO autores (
     'joca@silva.com', '12345',
     '1990-10-14'
 );
-
 -- ATIVIDADE) Insira pelo menos mais 2 autores
 --
+
+INSERT INTO autores (
+    nome, apelido,
+    foto, resumo,
+    email, senha,
+    nascimento
+) VALUES (
+    'Cintia Vasconcelos', 'Cintia',
+    'https://picsum.photos/205/301', 'Fotos de paisagem.',
+    'cintia@gmail.com', '123456',
+    '1985-01-20'
+);
+
+INSERT INTO autores (
+    nome, apelido,
+    foto, resumo,
+    email, senha,
+    nascimento
+) VALUES (
+    'John Wick', 'John',
+    'https://picsum.photos/205/301', 'Fotos da paisagem do john.',
+    'jonh@gmail.com', '123456',
+    '1980-06-08'
+);
 
 -- Cria a tabela categorias
 CREATE TABLE categorias (
@@ -69,6 +92,11 @@ INSERT INTO categorias (nome) VALUES ('Pelagem');
 
 -- ATIVIDADE) Insira pelo menos mais 4 categorias
 --
+INSERT INTO categorias (nome) VALUES ('Adestramento');
+INSERT INTO categorias (nome) VALUES ('Alimentação');
+INSERT INTO categorias (nome) VALUES ('Saúde');
+INSERT INTO categorias (nome) VALUES ('Animais');
+
 
 -- Cria a tabela artigos
 CREATE TABLE artigos (
@@ -101,6 +129,27 @@ INSERT INTO artigos (
 
 -- ATIVIDADE) Inserir pelo menos mais 3 artigos
 --
+INSERT INTO artigos (
+    titulo, imagem,
+    resumo, texto,
+    autor_id
+) VALUES (
+    'Segundo Artigo do Site', 'https://picsum.photos/id/1020/4288/2848.jpg',
+    'Tipo de Pelagem dos Gatos', 'A quantidade de tipos de pelagem de gatos é grande e, em função disso, muitos dos donos de pets ficam em dúvida na hora da realização dos cuidados mais fundamentais com seus bichanos, tendo em vista que, mesmo os gatinhos de raças que têm pouquíssimos (ou nenhum) pêlos, também precisam de atenção nesse quesito.',
+    '2'
+);
+INSERT INTO artigos (
+    titulo, imagem,
+    resumo, texto,
+    autor_id 
+) VALUES (
+    'Terceiro artigo do Site', 'https://picsum.photos/id/1025/4951/3301.jpg',
+    'Adestramento de Gatos', 'Convença o gato. Ele pode responder a todos os comandos, mas com algumas condições, como ganhar rescompensas. ...',
+    '3'
+);
+
+
+
 
 -- Cria a tabela de ligação 'artigos' <-> 'categorias'
 CREATE TABLE art_cat (
@@ -121,3 +170,7 @@ INSERT INTO art_cat (artigo_id, categoria_id) VALUES (1, 2); -- Artigo 1 na cate
 
 -- ATIVIDADE) Cadastre cada artigo em categorias
 --
+INSERT INTO art_cat (artigo_id, categoria_id) VALUES (3, 3);
+INSERT INTO art_cat (artigo_id, categoria_id) VALUES (2, 4);
+INSERT INTO art_cat (artigo_id, categoria_id) VALUES (3, 6);
+INSERT INTO art_cat (artigo_id, categoria_id) VALUES (2, 5);
