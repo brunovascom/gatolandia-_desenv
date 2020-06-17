@@ -3,10 +3,16 @@
 header("Content-type: text/html; charset=utf-8");
 
 // Dados de conexão com o banco de dados MySQL (CUIDADO!)
-$servidor = 'localhost'; // endereço do servidor MySQL
-$database = 'gatolandia'; // nome do banco de dados
-$usuario = 'root'; // nome do usuário do banco de dados
-$senha = ''; // senha do usuário do banco de dados
+//$servidor = 'localhost'; // endereço do servidor MySQL
+//$database = 'gatolandia'; // nome do banco de dados
+//$usuario = 'root'; // nome do usuário do banco de dados
+//$senha = ''; // senha do usuário do banco de dados
+
+// Dados de conexão com Awardsapce
+$servidor = 'fdb24.awardspace.net'; // endereço do servidor MySQL
+$database = '3472248_gatolandia'; // nome do banco de dados
+$usuario = '3472248_gatolandia'; // nome do usuário do banco de dados
+$senha = '3472248_gatolandia'; // senha do usuário do banco de dados
 
 // Conexão com o MySQL --> OO   ┌───> Parâmetros construtores do objeto
 $conn = new mysqli($servidor, $usuario, $senha, $database);

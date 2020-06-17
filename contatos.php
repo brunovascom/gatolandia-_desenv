@@ -108,7 +108,7 @@ INSERT INTO contatos (
         if($conn->query($sql)) :
 
             // Enviar por e-mail ao admin do site
-            @mail('admin@gatolandia.com', 'Novo contato', "Olá!\n\nUm novo contato foi enviado para o Gatolândia.\n\nObrigado.");
+            @mail('brunovasan@yahoo.com.br', 'Novo contato', "Olá!\n\nUm novo contato foi enviado para o Gatolândia.\n\nObrigado.");
 
             // Primeiro no do remetente
             $n = explode(' ', $nome);
